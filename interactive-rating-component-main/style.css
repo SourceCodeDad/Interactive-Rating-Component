@@ -1,0 +1,144 @@
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgrey: hsl(217, 12%, 63%);
+    --Mediumgrey: hsl(216, 12%, 54%);
+    --Darkblue: hsl(213, 19%, 18%);
+    --Verydarkblue: hsl(216, 12%, 8%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+body {
+  font-family: "Overpass";
+  background-color: black;
+  color: var(--Lightgrey);  
+  font-size: 15px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Verydarkblue);
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 375px;
+}
+
+/* start of the rating state */
+
+.ratingState {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: var(--White);
+}
+
+.staricon {
+    background-color: var(--Darkblue);
+    border-radius: 5rem;
+    width: fit-content;
+    padding: 1rem;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+button {
+    position: relative;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons .rateButton {
+   background-color: var(--Darkblue);
+   border: none;
+   border-radius: 5rem;
+   width: 2.5rem;
+   height: 2.5rem;
+   color: var(--White);
+   text-align: center;
+   padding: .6rem;
+   margin-bottom: 1rem;
+   cursor: pointer;
+}
+
+.buttons .rateButton:focus {
+    background-color: var(--Orange);
+}
+
+.buttons .rateButton:active {
+    top: 1px;
+}
+
+.buttons .rateButton:hover {
+    background-color: var(--Lightgrey);
+}
+
+
+.submitButton button {
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--Orange);
+    height: 2.5rem;
+    width: 100%;
+    color: var(--White);
+    letter-spacing: .2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.submitButton button:active {
+    background-color: var(--White);
+    color: var(--Orange);
+}
+
+
+/* start of the thank you state */
+.thankYouStateVis {
+    display: none;
+}
+
+.thankYouState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.thankYouState img {
+    margin-bottom: 1.5rem;
+}
+
+.thankYouState .selection {
+    background-color: var(--Darkblue);
+    color: var(--Orange);
+    border-radius: 5rem;
+    padding: .5rem;
+    
+}
+
+.rateText {
+    display: inline;
+}
